@@ -1,0 +1,18 @@
+* Markers [2/5]
+** DONE breakpoint
+** DONE Stopping in Rule
+** TODO next/step
+Follow positions with =gud-gawk-marker-regexp=.
+Need a way to differentiate from other output that looks the same:
+#+begin_quote
+<source_line> ....
+#+end_quote
+
+Could:
+- add a call to =where= after =next[i]= and =step[i]=
+- track whether previous command needs to be tracked - eg. another local
+  variable that gets set in =comint-input-filter=
+  This is probably better - cant really add =where= in all cases, eg. after
+  =comint-send-input= with another =comint-input-filter= anyway.
+** TODO up/down frames
+** TODO 
